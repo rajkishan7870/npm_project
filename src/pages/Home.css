@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+  }
+  .myapp {
+    text-align: center;
+    
+  }
+  .main_div{
+    height: 150vh;
+    width: 100vw;
+    background-color: whitesmoke;
+  }
+  .searchBox{
+    padding: 3rem;
+  }
+  .listLink{
+    /* border: 2px red solid; */
+   /* margin: 1rem; */
+   /* padding: 1rem; */
+   padding-left: 4rem;
+  }
