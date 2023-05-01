@@ -5,8 +5,8 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "@mui/material";
 
 export default function Home() {
-  const [know , setKnow] = useState(false)
-  const navigate = useNavigate()
+  const [know, setKnow] = useState(false);
+  const navigate = useNavigate();
   return (
     <div className="main_div">
       <div className="myapp">
@@ -14,14 +14,18 @@ export default function Home() {
       </div>
       <div className="listLink">
         <div className="myName">
-          <span onClick={() =>navigate('/favorite_list')}>Click me to go to my favorite package list </span>
+          <span onClick={() => navigate("/favorite_list")}>
+            Click me to go to my favorite package list{" "}
+          </span>
         </div>
         <div className="myName">
-        <span onClick={() => setKnow(true)} style={{display: know? 'none' : '', cursor:'pointer'}}>
-            Click me to know the owner of this App! 
+          <span
+            onClick={() => setKnow(true)}
+            style={{ display: know ? "none" : "", cursor: "pointer" }}
+          >
+            Click me to know the owner of this App!
           </span>
-          <h2 style={{display: know? '' : 'none'}}>Adarsh kushwaha</h2>
-         
+          <h2 style={{ display: know ? "" : "none" }}>Aman Dubey</h2>
         </div>
       </div>
       <div className="searchBox">
