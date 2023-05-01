@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "./SearchInput.css";
+import { Button } from "@mui/material";
 export default function SearchInput({ placeholder }) {
   const [packageName, setPackageName] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
   const [selectedValue, setSelectedValue] = useState("");
   const [inputFavorite, setInputFavorite] = useState("");
+  const [disabled, setDisabled] = useState(true);
 
   useEffect(() => {
     fetch("https://api.npms.io/v2/search?q=reactjs")
@@ -34,6 +36,7 @@ export default function SearchInput({ placeholder }) {
 
   function handleFavorite(e) {
     setInputFavorite(e.target.value);
+    setDisabled(false)
   }
 
   const storedData = JSON.parse(localStorage.getItem("listData")) || [];
@@ -105,9 +108,9 @@ export default function SearchInput({ placeholder }) {
                 />
               </div>
               
-              <button className="btn" onClick={handleSubmit}>
+              <Button variant="contained"  disabled={disabled} className="btn" onClick={handleSubmit}>
                 Submit
-              </button>
+              </Button>
             </div>
           )}
         </div>

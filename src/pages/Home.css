@@ -5,6 +5,8 @@
   }
   .myapp {
     text-align: center;
+    color: rgb(87, 117, 215);
+   
     
   }
   .main_div{
@@ -16,8 +18,18 @@
     padding: 3rem;
   }
   .listLink{
-    /* border: 2px red solid; */
-   /* margin: 1rem; */
-   /* padding: 1rem; */
-   padding-left: 4rem;
+    display: flex;
+    justify-content: space-between;
+   padding:0 4rem;
+  }
+  .myName{
+    color: blueviolet;
+    cursor: pointer;
+  }
+  .icn{
+    height: 30px;
+    /* border:  red 1px solid; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
