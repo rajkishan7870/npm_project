@@ -6,25 +6,18 @@ import { AiFillDelete } from "react-icons/ai";
 import { Button } from "@mui/material";
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
-import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
-import useMediaQuery from "@mui/material/useMediaQuery";
-import { useTheme } from "@mui/material/styles";
 
 export default function FavoriteList() {
   const myPackages = JSON.parse(localStorage.getItem("listData"));
  
   const [list, setList] = useState(myPackages);
   const [view, setView] = useState("");
-  // const [textArea, setTextArea] = useState('')
   const [hide, setHide] = useState(true);
   const [disabled, setDisabled] = useState(true);
 
   const navigate = useNavigate();
-  // console.log(list.name);
 
-  /*   MUI  */
 console.log(list);
   const [open, setOpen] = React.useState(false);
   const handleClickOpen = () => {
@@ -65,14 +58,9 @@ console.log(list);
 
   function handleEditeSave(view) {
    
-    // const packagename = myPackages.find(user => user.message === view )
     setView(list.message)
     
-    // console.log(packagename.name);
-    // console.log(view);
-    // alert('Your message has been updated')
-    // setView('')
-    // setHide(true)
+    
     
   }
 

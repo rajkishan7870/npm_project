@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./Home.css";
 import SearchInput from "../components/SearchInput";
 import { useNavigate } from "react-router-dom";
-import { Button } from "@mui/material";
 
 export default function Home() {
   const [know, setKnow] = useState(false);
@@ -25,7 +24,7 @@ export default function Home() {
           >
             Click me to know the owner of this App!
           </span>
-          <h2 style={{ display: know ? "" : "none" }}>Aman Dubey</h2>
+          <h2 style={{ display: know ? "" : "none" }}>Kishan Kumar</h2>
         </div>
       </div>
       <div className="searchBox">
